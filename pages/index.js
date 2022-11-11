@@ -16,7 +16,7 @@ function HomePage() {
         <> 
             <CSSReset />
             <div style={estiloHomePage}>
-                <Menu />
+                <Menu banner={config.banner} />
                 <Header />
                 <Timeline playlists={config.playlists} >
                     Conteúdo
@@ -52,11 +52,20 @@ const StyledHeader = styled.div`
             padding: 16px 32px;
             gap: 16px;
         }
+        .Banner{
+      width: 100%;
+      height: 400px;
+      left: 0px;
+      top: 46px;
+      border-radius: 0%;
+      object-fit: cover;
+    }
+  
 `;
 function Header(){
         return (
         <StyledHeader>
-            {/*img src="Banner"/>*/}
+             <img src={config.banner} alt="Mão psicodelica" className="Banner"/>
 
                 <section className="user-info">   
                     <img src={`https://github.com/${config.github}.png`} />
