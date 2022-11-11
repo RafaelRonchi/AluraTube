@@ -1,0 +1,134 @@
+{
+    "name:": "Rafael Ronchi",
+    "job": "Student",
+    "github": "RafaelRonchi",
+    "playlists": {
+        "jogos": [
+            {
+                "title": "O INICIO DA LENDA - MODO CARREIRA JOGADOR FIFA 23 - Parte 1",
+                "url": "https://www.youtube.com/watch?v=4z91idTGjGE&t=143s",
+                "thumb": "https://i3.ytimg.com/vi/4z91idTGjGE/maxresdefault.jpg"
+            },
+            {
+                "title": "GOD OF WAR RAGNAROK - O Início de Gameplay no PS5, em Português PT-BR!",
+                "url": "https://www.youtube.com/watch?v=6fNUO23I_BA",
+                "thumb": "https://i3.ytimg.com/vi/6fNUO23I_BA/maxresdefault.jpg"
+            },
+            {
+                "title": "FIFA 23 - Brasil vs Alemanha | FIFA World Cup Qatar 2022 | 4K",
+                "url": "https://www.youtube.com/watch?v=wXGL00U6Az8",
+                "thumb": "https://i3.ytimg.com/vi/wXGL00U6Az8/maxresdefault.jpg"
+            },
+            {
+                "title": "VIAGEM REALISTA ETS2 - ESTRADA PERIGOSA Onboard de Scania | POV Driving Truck",
+                "url": "https://www.youtube.com/watch?v=itywLRQsLSo",
+                "thumb": "https://i3.ytimg.com/vi/itywLRQsLSo/maxresdefault.jpg"
+            },
+            {
+                "title": "LEON DE VOLTA NO OVERWATCH... Só que agora é o 2!",
+                "url": "https://www.youtube.com/watch?v=3BrlLekLsi8",
+                "thumb": "https://i3.ytimg.com/vi/3BrlLekLsi8/maxresdefault.jpg"
+            },
+            {
+                "title": "Neymar humilhando O MELHOR JOGADOR DO MUNDO de CS:GO (quando o Neymar Jr decide jogar CS:GO)",
+                "url": "https://www.youtube.com/watch?v=6z5ht-wzqNQ",
+                "thumb": "https://i3.ytimg.com/vi/6z5ht-wzqNQ/maxresdefault.jpg"
+            },
+            {
+                "title": "Investindo 1 BILHÃO de EUROS no ÍBIS 😂 │ FIFA 21 Mod Brazuka Experimentos",
+                "url": "https://www.youtube.com/watch?v=ZnSMDI4yfhM&t=1449s",
+                "thumb": "https://i3.ytimg.com/vi/ZnSMDI4yfhM/maxresdefault.jpg"
+            },
+            {
+                "title": "TOCANDO PISADINHA E FUNK NO GUITAR HERO DOS CONSAGRADOS",
+                "url": "https://www.youtube.com/watch?v=yLL0WUeZjYQ&t=3s",
+                "thumb": "https://i3.ytimg.com/vi/yLL0WUeZjYQ/maxresdefault.jpg"
+            }
+        ],
+        "Programação": [
+            {
+                "title": "O que é o Java? #HipstersPontoTube",
+                "url": "https://www.youtube.com/watch?v=90NcVNsKGik&t=19s",
+                "thumb": "https://i3.ytimg.com/vi/90NcVNsKGik/maxresdefault.jpg"
+            },
+            {
+                "title": "Orientação a objetos com Roberta Arcoverde | #HipstersPontoTube",
+                "url": "https://www.youtube.com/watch?v=jpuJ1qrluoU",
+                "thumb": "https://i3.ytimg.com/vi/jpuJ1qrluoU/maxresdefault.jpg"
+            },
+            {
+                "title": "Como Sair do ZERO no Python em APENAS UMA AULA",
+                "url": "https://www.youtube.com/watch?v=GQpQha2Mfpg",
+                "thumb": "https://i3.ytimg.com/vi/GQpQha2Mfpg/maxresdefault.jpg"
+            },
+            {
+                "title": "PROGRAMANDO com Abstração, Herança e Polimorfismo",
+                "url": "https://www.youtube.com/watch?v=qiGTRJlCnlA",
+                "thumb": "https://i3.ytimg.com/vi/qiGTRJlCnlA/maxresdefault.jpg"
+            },
+            {
+                "title": "Um júnior já deveria saber como reduzir a quantidade de IFs de um código (e você, sabe?)",
+                "url": "https://www.youtube.com/watch?v=Lf3ZV0UsnEo",
+                "thumb": "https://i3.ytimg.com/vi/Lf3ZV0UsnEo/maxresdefault.jpg"
+            },
+            {
+                "title": "Qual a diferença entre Inteligência Artificial, Machine Learning, Data Science, Deep Learning, etc?",
+                "url": "https://www.youtube.com/watch?v=ccZ2pyr3YDw",
+                "thumb": "https://i3.ytimg.com/vi/ccZ2pyr3YDw/maxresdefault.jpg"
+            },
+            {
+                "title": "JAVA ou C# (C Sharp) - Qual melhor?",
+                "url": "https://www.youtube.com/watch?v=rB_GkPxcBGo",
+                "thumb": "https://i3.ytimg.com/vi/rB_GkPxcBGo/maxresdefault.jpg"
+            },
+            {
+                "title": "COMO É SER UM DESENVOLVEDOR FULL STACK? (Guia 2021 Completo)",
+                "url": "https://www.youtube.com/watch?v=HNjkqONzGS0",
+                "thumb": "https://i3.ytimg.com/vi/Vk50Bvk9ojg/maxresdefault.jpg"
+            },
+            {
+                "title": "https://www.youtube.com/watch?v=naZDkZukB-g",
+                "url": "https://www.youtube.com/watch?v=naZDkZukB-g",
+                "thumb": "https://i3.ytimg.com/vi/naZDkZukB-g/maxresdefault.jpg"
+            }
+        ],
+        "Futebol": [
+            {
+                "title": "CONVOCAÇÃO OFICIAL DA SELEÇÃO BRASILEIRA PARA COPA 2022 - LIVE DO CAZÉ | Cortes do Casimito",
+                "url": "https://www.youtube.com/watch?v=_2HPxW_3uoU",
+                "thumb": "https://i3.ytimg.com/vi/_2HPxW_3uoU/maxresdefault.jpg"
+            },
+            {
+                "title": "FLAMENGO X PALMEIRAS: QUEM TEVE O MELHOR TIME DE 2022? - MANO A MANO",
+                "url": "https://www.youtube.com/watch?v=LfwPmXdwQvo",
+                "thumb": "https://i3.ytimg.com/vi/LfwPmXdwQvo/maxresdefault.jpg"
+            },
+            {
+                "title": "MBAPPÉ FAZ GOL DANDO CANETA, MAS PSG TERMINA EM 2º NO GRUPO DA CHAMPIONS! - JUVENTUS 1 X 2 PSG",
+                "url": "https://www.youtube.com/watch?v=udI6Is20O9o",
+                "thumb": "https://i3.ytimg.com/vi/udI6Is20O9o/maxresdefault.jpg"
+            },
+            {
+                "title": "CASIMIRO REAGE: COLETIVA DO TITE APÓS DIVULGAR LISTA DE CONVOCADOS ft. LFF | Cortes do Casimito",
+                "url": "https://www.youtube.com/watch?v=054cmYfldR0",
+                "thumb": "https://i3.ytimg.com/vi/054cmYfldR0/maxresdefault.jpg"
+            },
+            {
+                "title": "AS SEMIFINAIS DA SUPERCOPA 2022 AO VIVO - FRANÇA X HOLANDA | EUA X NIGÉRIA",
+                "url": "https://www.youtube.com/watch?v=pUDe-vh6yKc",
+                "thumb": "https://i3.ytimg.com/vi/pUDe-vh6yKc/maxresdefault.jpg"
+            },
+            {
+                "title": "♫ AI, PEDRO! 🤤 PINTOU O 9 DO HEXA??? | Paródia Ai Preto - L7NNON, DJ Biel do Furduncinho, Bianca",
+                "url": "https://www.youtube.com/watch?v=PiYNuCfSrfM",
+                "thumb": "https://i3.ytimg.com/vi/PiYNuCfSrfM/maxresdefault.jpg"
+            },
+            {
+                "title": "O VASCO SUBIU! BRUNO FORMIGA COMENTA O ACESSO DO CRUZMALTINO E FUTURO DO CLUBE NA SÉRIE A!",
+                "url": "https://www.youtube.com/watch?v=q1cjZgM1ia8",
+                "thumb": "https://i3.ytimg.com/vi/q1cjZgM1ia8/maxresdefault.jpg"
+            }
+        ]
+    }
+    
+}
