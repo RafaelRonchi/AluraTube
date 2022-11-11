@@ -61,7 +61,7 @@ const StyledHeader = styled.div`
         }
         .Banner{
       width: 100%;
-      height: 400px;
+      height: 350px;
       left: 0px;
       top: 46px;
       border-radius: 0%;
@@ -130,9 +130,11 @@ function Favoritos(){
                 <div>
                     {config.Favoritos.map((youtuber) => {
                         return (
-                            <a href={youtuber.url}>
+                            <a key={youtuber.url} href={youtuber.url}>
                                 <img src={youtuber.img} />
-                                <span> {youtuber.nome}</span> 
+                                <span>
+                                     {youtuber.nome}
+                                </span> 
                             </a>
                         )
                     }
