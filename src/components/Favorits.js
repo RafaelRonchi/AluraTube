@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StyledFavorits = styled.div`
-    width: auto;
+    width: 100%;
     overflow: auto;
-    margin: auto;
+    margin: 32px;
     overflow: auto;
     section{
         display: flex;

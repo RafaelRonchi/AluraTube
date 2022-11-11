@@ -1,17 +1,21 @@
+import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/Timeline";
-import { StyledFavorits } from "../src/components/Favoritos"
+import { StyledFavorits } from "../src/components/Favorits"
 
 function HomePage() {
     //const mensagemPagina = "AluraTube";
     const estiloHomePage = {
         //backgroundColor: "red"
     };
+    const [valorDoFiltro, setValordoFiltro] = React.useState("");
+
 
     //console.log(config.playlists);
+    
 
     return (
         <> 
@@ -22,12 +26,12 @@ function HomePage() {
                     flex: 1,
                     // backgroundColor: "red",
                 }}>
-                        <Menu banner={config.banner} />
+                        <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValordoFiltro} />
                         <Header />
-                        <Timeline playlists={config.playlists} >
+                        <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
                             Conteúdo
                         </Timeline>
-                        <Favoritos />
+                        <Favorits />
      
             </div>
      </>
@@ -72,9 +76,8 @@ const StyledHeader = styled.div`
 function Header(){
         return (
         <StyledHeader>
-             <img src={config.banner} alt="Mão psicodelica" className="Banner"/>
-
-                <section className="user-info">   
+            <img src={config.banner} alt="Arvore" className="Banner"/>
+            <section className="user-info">   
                     <img src={`https://github.com/${config.github}.png`} />
                     <div> 
                         <h2>
@@ -84,13 +87,13 @@ function Header(){
                             {config.job}
                        </p>
                     </div> 
-                </section>
+            </section>
         </StyledHeader>
      )
 }
 
     
-function Timeline(props){
+function Timeline({searchValue, ...props}){
     const playlistNames = Object.keys(props.playlists);
     
     return (
@@ -100,27 +103,34 @@ function Timeline(props){
                 console.log(playlistName);
                 console.log(videos);
                 return (
-                    <section>
+                    <section key={playlistName}>
                         <h2>{playlistName}</h2>
                         <div>
-                            {videos.map((video) => {
-                                return (
-                                    <a href={video.url}>
-                                        <img src={video.thumb} />
-                                        <span>
-                                            {video.title}
-                                        </span>
-                                    </a>
-                                )
-                            })}
+                        {videos
+                                .filter((video) => {
+                                    const titleNormalized = video.title.toLowerCase();
+                                    const searchValueNormalized = searchValue.toLowerCase();
+                                    return titleNormalized.includes(searchValueNormalized)
+                                })
+                                .map((video) => {
+                                    return (
+                                        <a key={video.url} href={video.url}>
+                                            <img src={video.thumb} />
+                                            <span>
+                                                {video.title}
+                                            </span>
+                                        </a>
+                                    )
+                                })}
                         </div>
                     </section>
                 )
             })}
         </StyledTimeline>
     )
-    }
-function Favoritos(){
+}
+
+function Favorits(){
     return(
         <StyledFavorits>
             <section>
@@ -130,7 +140,7 @@ function Favoritos(){
                 <div>
                     {config.Favoritos.map((youtuber) => {
                         return (
-                            <a key={youtuber.url} href={youtuber.url}>
+                            <a href={youtuber.url}>
                                 <img src={youtuber.img} />
                                 <span>
                                      {youtuber.nome}
