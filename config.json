@@ -130,6 +130,34 @@
                 "thumb": "https://i3.ytimg.com/vi/q1cjZgM1ia8/maxresdefault.jpg"
             }
         ]
-    }
-    
+    },
+
+    "Favoritos": [
+        {
+            "nome": "Alura Cursos Online",
+            "url": "https://www.youtube.com/c/Alura",
+            "img": "https://yt3.ggpht.com/xqhIoXspeX7eqouJvNHl1xqpv9213Pl26ENZbuouXxO2RlDadjsveNXfgnj8GTUk7thFYUkVRg=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "nome": "Mario Souto - Dev Soutinho",
+            "url": "https://www.youtube.com/channel/UCzR2u5RWXWjUh7CwLSvbitA",
+            "img": "https://yt3.ggpht.com/m8Yrqf0Y81L4mZ1Cq7rGnJ4NDHe6729rxiFZvWyy9-xd_Z7Osmza7J8NWpN1axMHcCb1oKJNgA=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "nome": "Filipe Deschamps ",
+            "url": "https://www.youtube.com/c/FilipeDeschamps",
+            "img": "https://yt3.ggpht.com/ytc/AMLnZu9fwc9E-G17B2vMnbYzZBp_NYs4AmCE802y8x08=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "nome": "Cortes do Casimito [OFICIAL] ",
+            "url": "https://www.youtube.com/c/CortesdoCasimitoOFICIAL",
+            "img": "https://yt3.ggpht.com/ytc/AMLnZu-bu8UoUTz6sCJgx86VKU1HI1PheMS-2KjnkEZ0=s88-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "nome": "FLA TV",
+            "url": "https://www.youtube.com/c/flamengo",
+            "img": "https://yt3.ggpht.com/abA8fVEPC8-dhqO7N5fQri9h6x7tvxa1qhrsY2TSKBsHkKsAYBIZFHHxHawAzqd_IWzc4vCt=s88-c-k-c0x00ffffff-no-rj"
+        }
+    ]
 }
+    

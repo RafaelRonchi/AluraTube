@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/Timeline";
+import { StyledFavorits } from "../src/components/Favoritos"
 
 function HomePage() {
     //const mensagemPagina = "AluraTube";
@@ -15,17 +16,23 @@ function HomePage() {
     return (
         <> 
             <CSSReset />
-            <div style={estiloHomePage}>
-                <Menu banner={config.banner} />
-                <Header />
-                <Timeline playlists={config.playlists} >
-                    Conteúdo
-                </Timeline>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 1,
+                    // backgroundColor: "red",
+                }}>
+                        <Menu banner={config.banner} />
+                        <Header />
+                        <Timeline playlists={config.playlists} >
+                            Conteúdo
+                        </Timeline>
+                        <Favoritos />
      
             </div>
      </>
     );
-}
+};
  
 export default HomePage
 
@@ -69,12 +76,14 @@ function Header(){
 
                 <section className="user-info">   
                     <img src={`https://github.com/${config.github}.png`} />
-                    <h2>
-                    {config["name:"]}
-                    </h2>
-                    <p>
-                    {config.job}
-                    </p>
+                    <div> 
+                        <h2>
+                            {config["name:"]}
+                        </h2>
+                        <p>
+                            {config.job}
+                       </p>
+                    </div> 
                 </section>
         </StyledHeader>
      )
@@ -111,3 +120,27 @@ function Timeline(props){
         </StyledTimeline>
     )
     }
+function Favoritos(){
+    return(
+        <StyledFavorits>
+            <section>
+                <h2> 
+                    Favoritos
+                </h2>
+                <div>
+                    {config.Favoritos.map((youtuber) => {
+                        return (
+                            <a href={youtuber.url}>
+                                <img src={youtuber.img} />
+                                <span> {youtuber.nome}</span> 
+                            </a>
+                        )
+                    }
+                    
+                    )}
+                </div>
+            </section>
+        </StyledFavorits>
+    )
+
+}
