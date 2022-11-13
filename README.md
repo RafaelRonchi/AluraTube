@@ -1,5 +1,5 @@
 # AluraTube
-![Aluratube print](https://user-images.githubusercontent.com/95860101/201415780-1a658ffa-dfe9-4c2f-94cb-dccf23ad7404.png)
+![image](https://user-images.githubusercontent.com/95860101/201545901-edbf0fe8-fe6b-43bb-afb9-6601373d5f66.png)
 
 ## 💻 Sobre o projeto
 
