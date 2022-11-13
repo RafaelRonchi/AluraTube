@@ -1,16 +1,12 @@
 import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/Timeline";
-import { StyledFavorits } from "../src/components/Favorits"
+import { StyledFavoritos } from "../src/components/Favoritos"
 
 function HomePage() {
-    //const mensagemPagina = "AluraTube";
-    const estiloHomePage = {
-        //backgroundColor: "red"
-    };
+    
     const [valorDoFiltro, setValordoFiltro] = React.useState("");
 
 
@@ -19,8 +15,7 @@ function HomePage() {
 
     return (
         <> 
-            <CSSReset />
-                <div style={{
+            <div style={{
                     display: "flex",
                     flexDirection: "column",
                     flex: 1,
@@ -31,7 +26,7 @@ function HomePage() {
                         <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
                             Conteúdo
                         </Timeline>
-                        <Favorits />
+                        <Favoritos />
      
             </div>
      </>
@@ -49,6 +44,10 @@ export default HomePage
 //}  
 
 const StyledHeader = styled.div`
+
+    
+    background-color: ${({ theme }) => theme.backgroundLevel1};
+
         img {
           width: 80px;
           height: 80px;
@@ -56,7 +55,7 @@ const StyledHeader = styled.div`
         }
 
         .user-info {
-            margin-top: 50px;
+            margin-top: 10px;
             display: flex;
             align-items: center;
             width: 100%;
@@ -64,13 +63,13 @@ const StyledHeader = styled.div`
             gap: 16px;
         }
         .Banner{
-      width: 100%;
-      height: 350px;
-      left: 0px;
-      top: 46px;
-      border-radius: 0%;
-      object-fit: cover;
-    }
+             width: 100%;
+            height: 350px;
+            left: 0px;
+            top: 46px;
+            border-radius: 0%;
+            object-fit: cover;
+        }
   
 `;
 function Header(){
@@ -130,20 +129,20 @@ function Timeline({searchValue, ...props}){
     )
 }
 
-function Favorits(){
+function Favoritos(){
     return(
-        <StyledFavorits>
+        <StyledFavoritos>
             <section>
                 <h2> 
                     Favoritos
                 </h2>
                 <div>
-                    {config.Favoritos.map((youtuber) => {
+                    {config.Favoritos.map((favorito) => {
                         return (
-                            <a href={youtuber.url}>
-                                <img src={youtuber.img} />
+                            <a href={favorito.url}>
+                                <img src={favorito.img} />
                                 <span>
-                                     {youtuber.nome}
+                                     {favorito.nome}
                                 </span> 
                             </a>
                         )
@@ -152,7 +151,7 @@ function Favorits(){
                     )}
                 </div>
             </section>
-        </StyledFavorits>
+        </StyledFavoritos>
     )
 
 }

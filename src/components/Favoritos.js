@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledFavorits = styled.div`
+export const StyledFavoritos = styled.div`
     width: 100%;
     overflow: auto;
     margin: 32px;
