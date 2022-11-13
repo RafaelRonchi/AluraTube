@@ -1,5 +1,6 @@
 # AluraTube
-![image](https://user-images.githubusercontent.com/95860101/201545901-edbf0fe8-fe6b-43bb-afb9-6601373d5f66.png)
+![image](https://user-images.githubusercontent.com/95860101/201550961-6b214fa9-be7d-4652-a15a-8769466a9995.png)
+
 
 ## 💻 Sobre o projeto
 
