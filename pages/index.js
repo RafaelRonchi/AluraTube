@@ -49,7 +49,7 @@ const StyledHeader = styled.div`
     background-color: ${({ theme }) => theme.backgroundLevel1};
 
         img {
-          width: 80px;
+          width: 81px;
           height: 80px;
           border-radius: 50%;
         }
