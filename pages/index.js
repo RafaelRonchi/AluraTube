@@ -4,7 +4,7 @@ import React from "react";
 import Menu from "../src/components/Menu";
 
 import { StyledTimeline } from "../src/Timeline";
-import { StyledFavorites } from "../src/components/Favoritos"
+
 
 function HomePage() {
     
@@ -27,7 +27,6 @@ function HomePage() {
                         <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
                             Conteúdo
                         </Timeline>
-                        <Favorites favs={config.favorites}/>
      
             </div>
      </>
@@ -100,8 +99,8 @@ function Timeline({searchValue, ...props}){
         <StyledTimeline>
             {playlistNames.map((playlistName) => {
                 const videos = props.playlists[playlistName];
-                console.log(playlistName);
-                console.log(videos);
+                //console.log(playlistName);
+                //console.log(videos);
                 return (
                     <section key={playlistName}>
                         <h2>{playlistName}</h2>
@@ -129,37 +128,3 @@ function Timeline({searchValue, ...props}){
         </StyledTimeline>
     )
 }
-
-function Favorites(props) {
-    const favorites = Object.keys(props.favs);
-    return (
-        <StyledFavorites>
-        <div>
-            {favorites.map((favoritesUser)=>{
-                const favUsers = props.favs[favoritesUser];
-                //console.log(favoritesUser);
-                return (
-                    <section>
-                            <h2>{favoritesUser}</h2>
-                            <div>
-                                {favUsers
-                                .map((fav) => {
-                                    return (
-                                        <a key={fav.git} href={fav.git}> 
-                                            <img src={fav.img} />
-                                            <span>
-                                                {fav.name}
-                                            </span>
-                                        </a>
-                                    )
-                                })}
-                            </div>
-
-                    </section>
-                )
-            })}
-        </div>
-
-        </StyledFavorites>
-    )
- }

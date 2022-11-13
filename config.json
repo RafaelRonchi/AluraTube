@@ -130,23 +130,6 @@
                 "thumb": "https://i3.ytimg.com/vi/q1cjZgM1ia8/maxresdefault.jpg"
             }
         ]
-    },
-
-    "favorites": {
-            "Favoritos":[
-                {
-                    "name": "Paulo Silveira",
-                    "git": "https://github.com/peas",
-                    "img": "https://github.com/peas.png"
-                },
-                {
-                    "name": "Mário Souto",
-                    "git": "https://github.com/omariosouto",
-                    "img": "https://github.com/omariosouto.png"
-                }
-                
-            ]
-        
-    }
-}
+} 
+} 
     
