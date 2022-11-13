@@ -1,9 +1,10 @@
-import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
+import React from "react";
 import Menu from "../src/components/Menu";
+
 import { StyledTimeline } from "../src/Timeline";
-import { StyledFavoritos } from "../src/components/Favoritos"
+import { StyledFavorites } from "../src/components/Favoritos"
 
 function HomePage() {
     
@@ -26,7 +27,7 @@ function HomePage() {
                         <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
                             Conteúdo
                         </Timeline>
-                        <Favoritos />
+                        <Favorites favs={config.favorites}/>
      
             </div>
      </>
@@ -129,29 +130,36 @@ function Timeline({searchValue, ...props}){
     )
 }
 
-function Favoritos(){
-    return(
-        <StyledFavoritos>
-            <section>
-                <h2> 
-                    Favoritos
-                </h2>
-                <div>
-                    {config.Favoritos.map((favorito) => {
-                        return (
-                            <a href={favorito.url}>
-                                <img src={favorito.img} />
-                                <span>
-                                     {favorito.nome}
-                                </span> 
-                            </a>
-                        )
-                    }
-                    
-                    )}
-                </div>
-            </section>
-        </StyledFavoritos>
-    )
+function Favorites(props) {
+    const favorites = Object.keys(props.favs);
+    return (
+        <StyledFavorites>
+        <div>
+            {favorites.map((favoritesUser)=>{
+                const favUsers = props.favs[favoritesUser];
+                //console.log(favoritesUser);
+                return (
+                    <section>
+                            <h2>{favoritesUser}</h2>
+                            <div>
+                                {favUsers
+                                .map((fav) => {
+                                    return (
+                                        <a key={fav.git} href={fav.git}> 
+                                            <img src={fav.img} />
+                                            <span>
+                                                {fav.name}
+                                            </span>
+                                        </a>
+                                    )
+                                })}
+                            </div>
 
-}
+                    </section>
+                )
+            })}
+        </div>
+
+        </StyledFavorites>
+    )
+ }

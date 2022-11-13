@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledFavoritos = styled.div`
+export const StyledFavorites = styled.div`
     width: 100%;
     overflow: auto;
     margin: 32px;
@@ -39,4 +39,6 @@ export const StyledFavoritos = styled.div`
         margin-bottom: 16px;
         text-transform: capitalize;
     }
+    
 `;
+
