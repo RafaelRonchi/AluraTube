@@ -17,5 +17,5 @@ O AluraTube é uma página de videos inspiradas em uma página inicial do YouTub
 - ReactJS
 - Next.js
 - Styled Components
-- SupaBase
+
 
