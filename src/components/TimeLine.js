@@ -50,7 +50,7 @@ export const StyledTimeline = styled.div`
       grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
       grid-auto-flow: column;
       grid-auto-columns: minmax(200px,1fr);
-      overflow-x: auto;
+      overflow-x: scroll;
       scroll-snap-type: x mandatory;
       a {
         scroll-snap-align: start;
@@ -63,8 +63,7 @@ export const StyledTimeline = styled.div`
       }
     }
   }
-  // Scrollbar estilizado
-  // Firefox 
+
   * {
     scrollbar-width: auto;
     scrollbar-color: ${({ theme }) => theme.borderBase} ${({ theme }) => theme.backgroundLevel1};
@@ -82,4 +81,5 @@ export const StyledTimeline = styled.div`
     border-radius: 10px;
     border: 3px solid ${({ theme }) => theme.backgroundLevel1};
   }
+  
 `;
