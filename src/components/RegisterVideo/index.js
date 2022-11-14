@@ -32,7 +32,7 @@ function getThumbnail(url) {
 
 export default function RegisterVideo(){
     const formCadastro = useForm({
-        initialValues: {titulo: "a", url: "a"}
+        initialValues: {titulo: "Conheça o canal da ALura!", url: "https://youtu.be/94yuIVdoevc"}
     });
     
     const [formVisivel, setFormVisivel] = React.useState(false);

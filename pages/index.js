@@ -4,60 +4,61 @@ import styled from "styled-components";
 import Menu from "../src/components/Menu";
 
 import { videoService } from "../src/services/videoService";
-import { StyledTimeline } from "../src/Timeline";
+import { StyledTimeline } from "../src/components/Timeline";
 
 
 
 function HomePage() {
     const service = videoService();
     const [valorDoFiltro, setValordoFiltro] = React.useState("");
-    const [playlists, setPlaylists] = React.useState({jogos: []});
+    const [playlists, setPlaylists] = React.useState({ jogos: [] });
     //    const playlists = {
-      //      "jogos": []
-        //};
+    //      "jogos": []
+    //};
 
-        React.useEffect(() => {
-            console.log("useEffect");
-            service
-                .getAllVideos()
-                .then((dados) => {
-                    console.log(dados.data);
-                    // Forma imutavel
-                    const novasPlaylists = {};
-                    dados.data.forEach((video) => {
-                        if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
-                        novasPlaylists[video.playlist] = [
-                            video,
-                            ...novasPlaylists[video.playlist],
-                        ];
-                    });
-    
-                    setPlaylists(novasPlaylists);
+    React.useEffect(() => {
+        console.log("useEffect");
+        service
+            .getAllVideos()
+            .then((dados) => {
+                console.log(dados.data);
+                // Forma imutavel
+                const novasPlaylists = {};
+                dados.data.forEach((video) => {
+                    if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                    novasPlaylists[video.playlist] = [
+                        video,
+                        ...novasPlaylists[video.playlist],
+                    ];
                 });
-        }, []);
 
-    
-    
+                setPlaylists(novasPlaylists);
+            });
+    }, []);
+
+
+
 
     return (
-        <> 
+        <>
             <div style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    flex: 1,
-                    // backgroundColor: "red",
-                }}>
-                        <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValordoFiltro} />
-                        <Header />
-                        <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
-                            Conteúdo
-                        </Timeline>
-     
+                display: "flex",
+                flexDirection: "column",
+                flex: 1,
+                // backgroundColor: "red",
+            }}>
+                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValordoFiltro} />
+                <Header />
+                <Timeline searchValue={valorDoFiltro} playlists={config.playlists} favoritos={config.favorites}>
+                    Conteúdo
+                </Timeline>
+
             </div>
-     </>
+        </>
     );
 };
- 
+
+
 export default HomePage
 
 //  function Menu(){
@@ -97,29 +98,30 @@ const StyledHeader = styled.div`
         }
   
 `;
-function Header(){
-        return (
+function Header() {
+    return (
         <StyledHeader>
-            <img src={config.banner} alt="Arvore" className="Banner"/>
-            <section className="user-info">   
-                    <img src={`https://github.com/${config.github}.png`} />
-                    <div> 
-                        <h2>
-                            {config["name:"]}
-                        </h2>
-                        <p>
-                            {config.job}
-                       </p>
-                    </div> 
+            <img src={config.banner} alt="Arvore" className="Banner" />
+            <section className="user-info">
+                <img src={`https://github.com/${config.github}.png`} />
+                <div>
+                    <h2>
+                        {config["name:"]}
+                    </h2>
+                    <p>
+                        {config.job}
+                    </p>
+                </div>
             </section>
         </StyledHeader>
-     )
+    )
 }
 
-    
-function Timeline({searchValue, ...props}){
+
+function Timeline({ searchValue, ...props }) {
     const playlistNames = Object.keys(props.playlists);
-    
+    const favoritosNames = Object.keys(props.favoritos);
+
     return (
         <StyledTimeline>
             {playlistNames.map((playlistName) => {
@@ -130,7 +132,7 @@ function Timeline({searchValue, ...props}){
                     <section key={playlistName}>
                         <h2>{playlistName}</h2>
                         <div>
-                        {videos
+                            {videos
                                 .filter((video) => {
                                     const titleNormalized = video.title.toLowerCase();
                                     const searchValueNormalized = searchValue.toLowerCase();
@@ -143,6 +145,33 @@ function Timeline({searchValue, ...props}){
                                             <span>
                                                 {video.title}
                                             </span>
+                                        </a>
+                                    )
+                                })}
+                        </div>
+                    </section>
+                )
+            })}
+            {favoritosNames.map((favoritosName) => {
+                const favoritos = props.favoritos[favoritosName];
+                return (
+                    <section key={favoritosName}>
+                        <h2>{favoritosName}</h2>
+                        <div className="favoritos">
+                            {favoritos
+                                .map((favorito) => {
+                                    return (
+                                        <a
+                                            key={favorito.name}
+                                            className="favorito-container"
+                                            href={favorito.url}
+                                            target="_blank" rel="noreferrer"
+                                        >
+                                            <img
+                                                className="favorito-img"
+                                                src={`https://github.com/${favorito.github}.png`}
+                                            />
+                                            <span className="favorito-text">{favorito.name}</span>
                                         </a>
                                     )
                                 })}
