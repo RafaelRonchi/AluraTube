@@ -1,7 +1,7 @@
 # AluraTube
 <p align="center"> :construction: <b>Projeto em construção</b> :construction: </p>
 
-![image](https://user-images.githubusercontent.com/95860101/201550961-6b214fa9-be7d-4652-a15a-8769466a9995.png)
+![image](https://user-images.githubusercontent.com/95860101/201666316-2b8a8217-d6b7-4e42-8bd3-e49d51c3d443.png)
 
 
 ## 💻 Sobre o projeto
