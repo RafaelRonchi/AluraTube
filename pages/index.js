@@ -1,17 +1,42 @@
+import React from "react";
 import config from "../config.json";
 import styled from "styled-components";
-import React from "react";
 import Menu from "../src/components/Menu";
 
+import { videoService } from "../src/services/videoService";
 import { StyledTimeline } from "../src/Timeline";
 
 
+
 function HomePage() {
-    
+    const service = videoService();
     const [valorDoFiltro, setValordoFiltro] = React.useState("");
+    const [playlists, setPlaylists] = React.useState({jogos: []});
+    //    const playlists = {
+      //      "jogos": []
+        //};
 
+        React.useEffect(() => {
+            console.log("useEffect");
+            service
+                .getAllVideos()
+                .then((dados) => {
+                    console.log(dados.data);
+                    // Forma imutavel
+                    const novasPlaylists = {};
+                    dados.data.forEach((video) => {
+                        if (!novasPlaylists[video.playlist]) novasPlaylists[video.playlist] = [];
+                        novasPlaylists[video.playlist] = [
+                            video,
+                            ...novasPlaylists[video.playlist],
+                        ];
+                    });
+    
+                    setPlaylists(novasPlaylists);
+                });
+        }, []);
 
-    //console.log(config.playlists);
+    
     
 
     return (
