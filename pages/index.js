@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Menu from "../src/components/Menu";
 
 import { videoService } from "../src/services/videoService";
-import { StyledTimeline } from "../src/components/Timeline";
+import { StyledTimeline } from "../src/components/TimeLine";
 
 
 
