@@ -6,7 +6,7 @@
 
 ## 💻 Sobre o projeto
 
-O AluraTube é uma página de videos inspiradas em uma página inicial do YouTube. A página foi desenvolvida usando ReactJS, Next.js Styled Components e é escrito com JavaScript.
+O AluraTube é uma página de videos inspiradas em uma página de canal do YouTube. A página foi desenvolvida usando ReactJS, Next.js Styled Components e é escrito com JavaScript.
 
 
 [ 🖱 Clique para acessar a página inteira](https://alura-tube-orpin.vercel.app/)
