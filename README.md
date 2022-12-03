@@ -1,5 +1,5 @@
 # AluraTube
-<p align="center"> :construction: <b>Projeto em construção</b> :construction: </p>
+
 
 ![image](https://user-images.githubusercontent.com/95860101/201666316-2b8a8217-d6b7-4e42-8bd3-e49d51c3d443.png)
 
